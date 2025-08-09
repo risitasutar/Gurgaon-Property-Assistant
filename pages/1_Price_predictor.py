@@ -6,10 +6,13 @@ import numpy as np
 st.set_page_config(page_title="Viz Demo")
 
 
-with open(r'C:\Users\hp\PycharmProjects\startup-dashboard\mlproject\pages\df.pkl', 'rb') as file:
+# with open(r'C:\Users\hp\PycharmProjects\startup-dashboard\mlproject\pages\df.pkl', 'rb') as file:
+data_dir=Path(__file__).parent
+with open(data_dir / 'df.pkl', 'rb') as file:
     df = pickle.load(file)
 
-with open(r'C:\Users\hp\PycharmProjects\startup-dashboard\mlproject\pages\pipeline.pkl', 'rb') as file:
+# with open(r'C:\Users\hp\PycharmProjects\startup-dashboard\mlproject\pages\pipeline.pkl', 'rb') as file:
+with open(data_dir / 'pipeline.pkl', 'rb') as file:
     pipeline = pickle.load(file)
 
 
